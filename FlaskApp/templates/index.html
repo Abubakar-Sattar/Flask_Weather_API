@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+	<title>Flask App</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/home.css') }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<h2 class="weatherText">Weather Dashboard in Flask</h2>
+	<form class="weatherText" id="weatherForm" action="{{ url_for('render_results') }}" method="post">
+		Location Zip Code: <input class="weatherText" id="weatherInput" type="text" name="zipCode"><br>
+		<input class="weatherText" id="weatherSubmit" type="submit" name="Submit">
+	</form>
+</body>
+</html>
